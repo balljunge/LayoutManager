@@ -1,7 +1,7 @@
 Required:
 
 jquery.js
-jquery.observe.js
+jquery.observe.js -> https://github.com/kapetan/jquery-observe
 LayoutManager.js
 
 ---------------------------------------------------------------------------
