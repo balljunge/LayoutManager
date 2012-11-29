@@ -8,10 +8,10 @@ LayoutManager.js
 
 As seen in the neighbored example take this to your document ready function:
 
-LayoutManager.init();
-$("body").observe('childlist subtree', function (record) {
-    LayoutManager.invokeChildrenAdjustment(record.target);
-});
+LayoutManager.init();<br/>
+$("body").observe('childlist subtree', function (record) {<br/>
+    LayoutManager.invokeChildrenAdjustment(record.target);<br/>
+});<br/>
 
 ---------------------------------------------------------------------------
 
