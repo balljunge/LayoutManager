@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        div.layout:not(.child) {
+            background-color: #eee;
+            border-left:5px solid white;
+            border-right:5px solid white;
+        }
+
+        div.layout.horizontal > .child {
+            border-bottom:5px solid white;
+            background-color: rgba(250,230,230,0.6);
+            overflow: auto;
+        }
+
+        div.layout.vertical > .child {
+            border-right:5px solid white;
+            background-color: rgba(250,230,230,0.6);
+            overflow: auto;
+        }
+
+        .child.sub {
+            background-color: rgba(230,230,250,0.6);
+            overflow: auto;
+        }
+
+        .fixedHeight {
+            height:100px;
+        }
+
+        .fixedWidth {
+            width:200px;
+            overflow:hidden;
+        }
+
+        div.layout.no-bg {
+            background-color: transparent;
+        }
+
+
+    </style>
+    <script src="../jquery.js" type="text/javascript"></script>
+    <script src="jquery.observe.js" type="text/javascript"></script>
+    <script src="LayoutManager.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            LayoutManager.init();
+            $("body").observe('childlist subtree', function (record) {
+                LayoutManager.invokeChildrenAdjustment(record.target);
+            });
+
+            $("#east").click(function () {
+                if ($(this).css("position") != "absolute") {
+                    $(this).css("position", "absolute");
+                    $(this).css("background-color", "red");
+                    $(this).css("width", "200px");
+                    $(this).css("top",0);
+                    $(this).css("margin-left", "50%");
+                } else {
+                    $(this).css("position", "");
+                    $(this).css("background-color", "");
+                    $(this).css("width", "");
+                    $(this).css("top", "");
+                    $(this).css("margin-left", "");
+                }
+                LayoutManager.invokeChildrenAdjustment($(this).parent());
+            });
+
+            $("#addDivToMain").click(function () {
+                $("#main").append("<div class='layout child'></div>");
+            });
+            $("#addDivToEast").click(function () {
+                if (!$('#east').hasClass("vertical")) {
+                    $('#east').addClass("vertical");
+                }
+                $("#east").append("<div id='eastChild" + $("#east").length + "' class='layout child'></div>");
+            });
+            $("#addDivToEastChild1").click(function () {
+                if (!$('#eastChild1').hasClass("horizontal")) {
+                    $('#eastChild1').addClass("horizontal");
+                }
+                $("#eastChild1").append("<div class='child'></div>");
+            });
+        });
+    </script>
+</head>
+<body class="layout vertical">
+<div id="west" class="layout fixedWidth">
+    <a href="#" id="addDivToMain">DivToMain</a>
+    <br/>
+    <a href="#" id="addDivToEast">DivToEast</a>
+    <br/>
+    <a href="#" id="addDivToEastChild1">DivToEastChild1</a>
+</div>
+<div id="main" class="layout horizontal">
+    <div class="child fixedHeight"></div>
+    <div class="layout horizontal">
+        <div class="child">
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+        </div>
+        <div class="child"></div>
+    </div>
+    <div  id="test" class="child"></div>
+    </div>
+</div>
+<div id="east" class="layout horizontal fixedWidth">
+</div>
+</body>
+</html>
