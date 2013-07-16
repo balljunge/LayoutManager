@@ -55,7 +55,7 @@ you have 2 options.
 ----------------------------------------------------------------------------
 
 Example "Horizontal":
-```
+```html
 <body class="layout horizontal">
     <div class="fixedHeight" style="height:20px">This Div keeps its 20px in height</div>
     <div>This Div takes the rest of the remaining height of its parent.</div>
@@ -64,7 +64,7 @@ Example "Horizontal":
 ----------------------------------------------------------------------------
 
 Example "Vertical":
-```
+```html
 <body class="layout vertical">
     <div class="fixedVertical" style="width:20px">This Div keeps its 20px in width</div>
     <div>This Div takes the rest of the remaining width of its parent.</div>
@@ -73,7 +73,7 @@ Example "Vertical":
 ----------------------------------------------------------------------------
 
 Example "Complex":
-```
+```html
 <body class="layout vertical">
     <div class="fixedVertical" style="width:20px">This Div keeps its 20px in width</div>
     <div class="layout horizontal"> <!-- the nested containers of this DIV take the remaining width of the body -->
