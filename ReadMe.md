@@ -2,6 +2,8 @@ Required:
 
 jquery.js<br/>
 jquery.observe.js -> https://github.com/kapetan/jquery-observe <br/>
+jquery.dimensions.js -> http://v3.javascriptmvc.com/jquery/dist/jquery.dimensions.etc.js
+jquery.observerfix.js -> Object.keys fix for older browsers, as found here -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 LayoutManager.js
 
 ---------------------------------------------------------------------------
