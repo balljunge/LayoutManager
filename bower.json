@@ -12,7 +12,7 @@
     "authors": [
         "Andreas Tempsch <andreas.tempsch@schmutterer-partner.at>"
     ],
-    "description": "LayoutManager gives you the possibility to fill elements automatically into available space.",
+    "description": "jquery-layoutmanager gives you the possibility to fill elements automatically into available height of a browser",
     "keywords": [
         "layout",
         "automated",
