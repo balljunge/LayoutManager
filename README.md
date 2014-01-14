@@ -28,7 +28,8 @@ Add the following to the bottom of your html side to get started:
 
 ```html
 <script src="bower_dir/jquery/jquery.js" type="text/javascript"></script>
-<script src="bower_dir/jquery.dimensions/index.js" type="text/javascript"></script>
+<script src="bower_dir/jquerypp-release/raw/jquery/dom/styles.js" type="text/javascript"></script>
+<script src="bower_dir/jquerypp-release/raw/jquery/dom/dimensions.js" type="text/javascript"></script>
 <script src="bower_dir/jquery-observe/jquery-observe.js" type="text/javascript"></script>
 <script src="bower_dir/jquery.observerfix/jquery.observerfix.js" type="text/javascript"></script>
 <script src="bower_dir/jquery-layoutmanager/jquery-layoutmanager.js" type="text/javascript"></script>
