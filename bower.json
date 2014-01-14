@@ -1,29 +1,29 @@
 {
-  "name": "jquery-layoutmanager",
-  "version": "1.0.0",
-  "dependencies": {
-    "jquery": "~1.7",
-    "jquery-observe": "git://github.com/kapetan/jquery-observe.git",
-    "jquery.dimensions": "http://v3.javascriptmvc.com/jquery/dist/jquery.dimensions.etc.js",
-    "jquery.observerfix": "git://github.com/schmutterer/observerfix.git"
-  },
-  "main": "jquery-layoutmanager.js",
-  "homepage": "https://github.com/schmutterer/jquery-layoutmanager",
-  "authors": [
-    "Andreas Tempsch <andreas.tempsch@schmutterer-partner.at>"
-  ],
-  "description": "LayoutManager gives you the possibility to fill elements automatically into available space.",
-  "keywords": [
-    "layout",
-    "automated",
-    "layouting",
-    "scrolling"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "example",
-    "README.md",
-    "**/.*",
-    "bower_components"
-  ]
+    "name": "jquery-layoutmanager",
+    "version": "1.0.0",
+    "dependencies": {
+        "jquery": "~1.7",
+        "jquery-observe": "git://github.com/kapetan/jquery-observe.git",
+        "jquery.dimensions": "http://v3.javascriptmvc.com/jquery/dist/jquery.dimensions.etc.js",
+        "jquery.observerfix": "git://github.com/schmutterer/observerfix.git"
+    },
+    "main": "jquery-layoutmanager.js",
+    "homepage": "https://github.com/schmutterer/jquery-layoutmanager",
+    "authors": [
+        "Andreas Tempsch <andreas.tempsch@schmutterer-partner.at>"
+    ],
+    "description": "LayoutManager gives you the possibility to fill elements automatically into available space.",
+    "keywords": [
+        "layout",
+        "automated",
+        "layouting",
+        "scrolling"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "example",
+        "README.md",
+        "**/.*",
+        "bower_components"
+    ]
 }
