@@ -1,4 +1,4 @@
-LayoutManager = (function($){
+LayoutManager = (function ($) {
     var lm = {},
         constants = {
             ALIGN_VERTICAL: "vertical",
@@ -46,34 +46,34 @@ LayoutManager = (function($){
     }
 
     function adjustChildren(parent, childCount, align, cssClass) {
-        var availableSpace = getElementInnerSize(parent,align),
+        var availableSpace = getElementInnerSize(parent, align),
             childrenToAdjust = [],
             fixed = 0;
 
         //iterate over all children to filter the ones to adjust and count the fixed
-        $.each($(parent).children(),function(){
-            if($(this).css("position") != "absolute" && $(this).css("display")!="none" && $(this).attr("type") != "hidden"){
+        $.each($(parent).children(), function () {
+            if ($(this).css("position") != "absolute" && $(this).css("display") != "none" && $(this).attr("type") != "hidden") {
                 childrenToAdjust.push(this);
-                if($(this).hasClass(cssClass)){
-                    availableSpace = availableSpace - getElementOuterSize(this,align);
+                if ($(this).hasClass(cssClass)) {
+                    availableSpace = availableSpace - getElementOuterSize(this, align);
                     fixed = fixed + 1;
                 }
             }
         });
 
         //adjust all non-fixed children
-        $.each(childrenToAdjust,function(){
-            if(align == constants.WIDTH){
-                if(!$(this).hasClass(cssClass)){
-                    resizeWidth(this, availableSpace/(childrenToAdjust.length-fixed));
+        $.each(childrenToAdjust, function () {
+            if (align == constants.WIDTH) {
+                if (!$(this).hasClass(cssClass)) {
+                    resizeWidth(this, availableSpace / (childrenToAdjust.length - fixed));
                 }
                 resizeHeight(this, $(this).parent().height());
                 $(this).css("float", "left");
-            } else if(align == constants.HEIGHT){
-                if(!$(this).hasClass(cssClass)){
-                    resizeHeight(this, availableSpace/(childrenToAdjust.length-fixed));
+            } else if (align == constants.HEIGHT) {
+                if (!$(this).hasClass(cssClass)) {
+                    resizeHeight(this, availableSpace / (childrenToAdjust.length - fixed));
                 }
-                resizeWidth(this,$(parent).width());
+                resizeWidth(this, $(parent).width());
             }
         });
     }
@@ -87,7 +87,7 @@ LayoutManager = (function($){
         return 0;
     }
 
-    function getElementInnerSize(elem, align){
+    function getElementInnerSize(elem, align) {
         if (align == constants.HEIGHT) {
             return $(elem).height();
         } else if (align == constants.WIDTH) {
@@ -96,12 +96,12 @@ LayoutManager = (function($){
         return 0;
     }
 
-    function resizeWidth(elem,resizeTo){
-        $(elem).outerWidth(resizeTo,true);
+    function resizeWidth(elem, resizeTo) {
+        $(elem).outerWidth(resizeTo, true);
     }
 
-    function resizeHeight(elem,resizeTo){
-        $(elem).outerHeight(resizeTo,true);
+    function resizeHeight(elem, resizeTo) {
+        $(elem).outerHeight(resizeTo, true);
     }
 
     return lm;
