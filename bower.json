@@ -9,8 +9,12 @@
     },
     "main": "jquery-layoutmanager.js",
     "homepage": "https://github.com/schmutterer/jquery-layoutmanager",
-    "authors": [
-        "Andreas Tempsch <andreas.tempsch@schmutterer-partner.at>"
+    "author": "Andreas Tempsch <andreas.tempsch@schmutterer-partner.at>",
+    "contributors": [
+        {
+            "name": "Andreas Pieber",
+            "email": "<andreas.pieber@schmutterer-partner.at"
+        }
     ],
     "description": "jquery-layoutmanager gives you the possibility to fill elements automatically into available height of a browser",
     "keywords": [
