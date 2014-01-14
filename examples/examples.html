@@ -52,13 +52,45 @@
 
 
     </style>
-    <script src="libs/jquery.js" type="text/javascript"></script>
-    <script src="libs/jquery.dimensions.js" type="text/javascript"></script>
-    <script src="libs/jquery.observe.js" type="text/javascript"></script>
-    <script src="libs/jquery.observerfix.js" type="text/javascript"></script>
-    <script src="LayoutManager.js" type="text/javascript"></script>
+    
+</head>
+<body class="layout vertical">
+<div id="west" class="layout fixedWidth">
+    <a href="#" id="addDivToMain">DivToMain</a>
+    <br/>
+    <a href="#" id="addDivToEast">DivToEast</a>
+    <br/>
+    <a href="#" id="addDivToEastChild1">DivToEastChild1</a>
+</div>
+<div id="main" class="layout horizontal">
+    <div class="child fixedHeight"></div>
+    <div class="layout horizontal">
+        <div class="child">
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+            as df asdf as df asdf a dsf adsf asd fa sdf asdf
+        </div>
+        <div class="child"></div>
+    </div>
+    <div  id="test" class="child"></div>
+    </div>
+</div>
+<div id="east" class="layout horizontal fixedWidth">
+</div>
+<script src="deps/jquery/jquery.js" type="text/javascript"></script>
+    <script src="deps/jquery.dimensions/index.js" type="text/javascript"></script>
+    <script src="deps/jquery-observe/jquery-observe.js" type="text/javascript"></script>
+    <script src="deps/jquery.observerfix/jquery.observerfix.js" type="text/javascript"></script>
+    <script src="../jquery-layoutmanager.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
             LayoutManager.init();
             $("body").observe('childlist subtree', function (record) {
                 LayoutManager.invokeChildrenAdjustment(record.target);
@@ -96,39 +128,6 @@
                 }
                 $("#eastChild1").append("<div class='child'></div>");
             });
-        });
     </script>
-</head>
-<body class="layout vertical">
-<div id="west" class="layout fixedWidth">
-    <a href="#" id="addDivToMain">DivToMain</a>
-    <br/>
-    <a href="#" id="addDivToEast">DivToEast</a>
-    <br/>
-    <a href="#" id="addDivToEastChild1">DivToEastChild1</a>
-</div>
-<div id="main" class="layout horizontal">
-    <div class="child fixedHeight"></div>
-    <div class="layout horizontal">
-        <div class="child">
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-            as df asdf as df asdf a dsf adsf asd fa sdf asdf
-        </div>
-        <div class="child"></div>
-    </div>
-    <div  id="test" class="child"></div>
-    </div>
-</div>
-<div id="east" class="layout horizontal fixedWidth">
-</div>
 </body>
 </html>

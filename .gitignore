@@ -2,3 +2,4 @@ LayoutManager.iml
 .idea
 .DS_Store
 bower_components
+examples/deps
