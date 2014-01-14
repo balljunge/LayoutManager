@@ -7,7 +7,7 @@ The jquery-layoutmanager is a javascript tool intended to fix exactly this descr
 Dependencies
 ------------
 
-The jquery-layoutmanager only depends on jquery, a jquery plugin to observe elements and two other scripts to fix various problems in some browsers.
+The jquery-layoutmanager only depends on jquery, a jquery plugin to observe elements and some other scripts from the *jquerypp* project to help with calculations.
 
 Quickstart
 ----------
@@ -31,7 +31,6 @@ Add the following to the bottom of your html side to get started:
 <script src="bower_dir/jquerypp-release/raw/jquery/dom/styles.js" type="text/javascript"></script>
 <script src="bower_dir/jquerypp-release/raw/jquery/dom/dimensions.js" type="text/javascript"></script>
 <script src="bower_dir/jquery-observe/jquery-observe.js" type="text/javascript"></script>
-<script src="bower_dir/jquery.observerfix/jquery.observerfix.js" type="text/javascript"></script>
 <script src="bower_dir/jquery-layoutmanager/jquery-layoutmanager.js" type="text/javascript"></script>
 <script type="text/javascript">
     LayoutManager.init();

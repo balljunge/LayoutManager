@@ -4,8 +4,7 @@
     "dependencies": {
         "jquery": "~1.7 || ~2",
         "jquery-observe": "git://github.com/kapetan/jquery-observe.git",
-        "jquerypp-release": "~1",
-        "jquery.observerfix": "git://github.com/schmutterer/observerfix.git"
+        "jquerypp-release": "~1"
     },
     "main": "jquery-layoutmanager.js",
     "homepage": "https://github.com/schmutterer/jquery-layoutmanager",
